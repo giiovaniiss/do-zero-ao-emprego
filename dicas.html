@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas - Emprego Jovem</title>
+    <style>
+        /* Estilos Globais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos Específicos para Dicas */
+        #dicas-entrevista ul, #dicas-curriculo ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        #dicas-entrevista li, #dicas-curriculo li {
+            margin-bottom: 10px;
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="entrevista.html">Simulação de Entrevista</a></li>
+                    <li><a href="dicas.html">Dicas</a></li>
+                    <li><a href="curriculo.html">Gerador de Currículo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="dicas-entrevista">
+            <h1>Dicas para Entrevistas</h1>
+            <ul>
+                <li>Pesquise sobre a empresa antes da entrevista.</li>
+                <li>Prepare respostas para perguntas comuns.</li>
+                <li>Vista-se de forma profissional.</li>
+                <li>Seja pontual.</li>
+                <li>Destaque suas habilidades e conquistas.</li>
+                <li>Peça feedback ao final da entrevista.</li>
+            </ul>
+        </section>
+
+        <section id="dicas-curriculo">
+            <h1>Dicas para Currículos</h1>
+            <ul>
+                <li>Mantenha seu currículo atualizado.</li>
+                <li>Use palavras-chave relevantes para a vaga.</li>
+                <li>Destaque suas habilidades e experiências.</li>
+                <li>Seja conciso e claro.</li>
+                <li>Revise seu currículo cuidadosamente.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Emprego Jovem</p>
+        </div>
+    </footer>
+</body>
+</html>

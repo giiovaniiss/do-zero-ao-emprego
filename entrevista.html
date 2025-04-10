@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Entrevista - Emprego Jovem</title>
+    <style>
+        /* Estilos Globais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos Específicos para Entrevista */
+        #simulacao form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #simulacao form label {
+            font-weight: bold;
+        }
+
+        #simulacao form input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #simulacao form button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #pergunta-resposta {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #pergunta {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #form-resposta textarea {
+            width: calc(100% - 18px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #feedback {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 4px;
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="entrevista.html">Simulação de Entrevista</a></li>
+                    <li><a href="dicas.html">Dicas</a></li>
+                    <li><a href="curriculo.html">Gerador de Currículo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="simulacao">
+            <h1>Simulação de Entrevista</h1>
+            <p>Pratique suas habilidades com perguntas geradas por IA.</p>
+
+            <form id="form-entrevista">
+                <label for="area">Área de Interesse:</label>
+                <input type="text" id="area" name="area" required>
+                <button type="button" onclick="gerarPergunta()">Iniciar Simulação</button>
+            </form>
+
+            <div id="pergunta-resposta">
+                <h2 id="pergunta"></h2>
+                <form id="form-resposta">
+                    <label for="resposta">Sua Resposta:</label>
+                    <textarea id="resposta" name="resposta" rows="5" required></textarea>
+                    <button type="button" onclick="enviarResposta()">Enviar Resposta</button>
+                </form>
+                <div id="feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Emprego Jovem</p>
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
